@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+<title>jQuery Demo 2017</title>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style>
+.important {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.green {
+    background: #555;
+	color: #ffffff;
+	text-align: center;
+	font-size: 20px;
+}
+
+#addedIn {
+    background: #555;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	display: none;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+</style>
+
+<body>
+
+<script>
+// Code to show and hide menu
+$(document).ready(function(){
+$("#flip").click(function(){
+ $("#menu").slideToggle(1000);
+
+
+	});
+});
+// code t give a compliment
+$(document).ready(function(){
+$("#btn1").click(function(){
+ $("#compliment").text("You are great at jQuery!");
+
+	});
+});
+
+// Code to hide paragraphs
+$(document).ready(function(){
+$("#hide").click(function(){
+ $("p").hide(3000);
+
+	});
+	
+$("#show").click(function(){
+ $("p").show(3000);
+
+	});	
+
+});
+
+// Code to fade out div
+
+$(document).ready(function(){
+$("#fade").click(function(){
+ $("#magic").fadeOut(5000);
+
+	});
+	
+$("#fadeBack").click(function(){
+ $("#magic").fadeIn(5000);
+
+	});	
+	
+});
+
+
+// Change css
+
+$(document).ready(function(){
+    $("#cssbutton").click(function(){
+        $("#c3, #c4").addClass("green");
+        
+    });
+});
+
+// Append a comment
+$(document).ready(function(){
+    $("#putUp").click(function(){
+        $("ol").prepend("<li>Liam: " + comment.value + "</li>");
+        
+    });
+});
+
+
+$(document).ready(function(){
+    $("#AddToCart").click(function(){
+        $("#addedIn").slideDown(1000).delay(1000).slideUp(3000);
+        
+    });
+});
+
+
+$(document).ready(function(){
+    $("#more").click(function(){
+        $("#therest").slideToggle(2000);
+        
+    });
+	
+	 $("#finished").click(function(){
+        $("#therest").fadeOut(2000);
+        
+    });
+});
+
+
+$(document).ready(function(){
+    $("#move").click(function(){
+        $("#LiamAnimate").animate({height: "110px"});
+		$("#LiamAnimate").delay(2000).animate({marginLeft: "+=400px"});
+		$("#LiamAnimate").delay(2000).animate({marginLeft: "-=400px"});
+		$("#LiamAnimate").animate({height: "5px"}, 2000);
+		$("#LiamAnimate").animate({marginLeft: "+=400px"}, 1);
+		$("#LiamAnimate").animate({marginLeft: "-=400px"}, 1);
+		$("#LiamAnimate").animate({marginLeft: "+=400px"}, 1);
+		$("#LiamAnimate").animate({marginLeft: "-=400px"}, 1);
+        
+    });
+});
+
+
+
+
+
+</script>
+
+
+
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i id="flip" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  
+  
+  <div class="w3-center">
+  <h4>Put Some Life In Your Website</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">WITH jQUERY</h1>
+    
+  </div>
+</header>
+
+
+<div id="menu" class="w3-center" style="display:none">
+  <h2 id="compliment">Menu Shows and hides with the press of a button</h2>
+  <button id="btn1" class="w3-btn w3-theme">Compliment</button> 
+  <button id="hide" class="w3-btn w3-theme">Hide</button> 
+  <button id="show" class="w3-btn w3-theme">Show</button> 
+  <button id="fadeBack" class="w3-btn w3-theme">Fade In</button> 
+  <button id="cssbutton" class="w3-btn w3-theme">Change CSS</button> 
+  <button class="w3-btn w3-theme" id="flip5">Menu 5</button> 
+</div>
+
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card-2 w3-container" style="min-height:460px">
+  <h3>Change Layouts</h3><br>
+  <i class="fa fa-bomb w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>When I click Hide</p>
+  <p>All p elemts on the page</p>
+  <p>will be hidden</p>
+  <p id="more">Read more ..... </p>
+  <p id="therest" style="display:none">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker incl
+  <span id="finished">Done... </span>
+  </p>
+  
+  </div>
+</div>
+
+<div class="w3-third">
+  <div id="magic" class="w3-card-2 w3-container" style="min-height:460px">
+  <h3 id="fade">Fade Away</h3><br>
+  <i class="fa fa-cloud w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Click on the heading</p>
+  <p>Watch the div fade away</p>
+  <p>Press Fade In on the menu</p>
+  <p>Watch it re-appear</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card-2 w3-container" style="min-height:460px">
+  <h3 id="move">Animate</h3><br>
+  <i id="wico" class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Animation Gives great effects</p>
+  <p>you can really mix it up</p>
+  <div id="LiamAnimate" class="w3-col w3-container m2 w3-red"><p id="answer">Watch</p></div>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<hr>
+<div class="w3-center">
+  <h2>Change CSS</h2>
+</div>
+
+<div class="w3-row">
+  <div id="c1" class="w3-col w3-container m2 "><p>Each</p></div>
+  <div id="c2" class="w3-col w3-container m2 "><p>Div</p></div>
+  <div id="c3" class="w3-col w3-container m2 "><p>Here Will</p></div>
+  <div id="c4" class="w3-col w3-container m2 "><p>have A</p></div>
+  <div id="c5" class="w3-col w3-container m2 "><p>New</p></div>
+  <div id="c6" class="w3-col w3-container m2 "><p>Style</p></div>
+</div>
+
+<hr>
+<div class="w3-center">
+  <h2>Append</h2>
+  <p class="w3-large">Append items to a list!</p>
+</div>
+<br>
+
+<div class="w3-row w3-border">
+  <div class="w3-half w3-container w3-blue w3-border">
+    <h5>Here is a list</h5>  
+    <ol>
+  <li>Gerry: - I like this</li>
+  <li>Denitsa: - jQuery is great!</li>
+ 
+</ol>
+<input type="text" id="comment" name="comment" placeholder="Leave a Comment..">
+<button id="putUp" class="w3-btn w3-theme">Post</button> 
+
+  </div>
+  <div class="w3-half w3-container">
+    <h5>Chaining</h5>
+	<i class="fa fa-fire-extinguisher w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+<button id="AddToCart" class="w3-btn w3-theme">Add To Crt</button> 	
+<div id="addedIn" >Added To Cart</div>
+  </div>
+</div>
+<br>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3>Footer</h3>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>    
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+  <p>Remember to check out our  <a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank">W3.CSS Reference</a></p>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

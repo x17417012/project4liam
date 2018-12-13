@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Microsoft Surface Pro",
+        "id": 8,
+        "Comment": "In great condiction, throughout and works perfectly. Full touchscreen. Intel Core i3 processor and windows 10",
+        "email": [
+            "sarah_punch@outlook.com",
+            "70000000"
+        ],
+        "photo": "surface.jpg"
+    },
+    {
+        "name": "Dell XPS 9350 ultrabook with 4k screen",
+        "id": 9,
+        "Comment": "13 inch 4k touchscreen, 8GB ram, 2x USB type A, Windows 10, 512 GB SSD",
+        "email": [
+            "louise-duffy888@gmail.com",
+            "92738234823"
+        ],
+        "photo": "dell.jpg"
+    }
+]

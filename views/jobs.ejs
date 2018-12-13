@@ -1,0 +1,25 @@
+  <% include ../partials/header %>
+   <body class="w3-black">
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+  <div class="row">
+    <h1>Welcome to the jobs section </h1>
+    <h2> Here you can browse our advertised jobs! If a job is not useful to you, you may delete it from the screen.</h2></br>
+
+    <% jobs.forEach(function(jobs) { %>
+                
+                <div class="items">
+                    <%= jobs.id %><br>
+                    <%= jobs.name %><br> kjlkj
+                    <%= jobs.email %><br>
+                    <%= jobs.Comment %><br>
+                    <a href="/deletejobs/<%= jobs.id %>" class="button">Delete</a>
+                      <a href="/editjobs/<%= jobs.id %>" class="button">Edit</a>
+                    </div>
+             
+         <% }); %>
+  </div>
+  
+  
+</body>
+
+<% include ../partials/footer %>
